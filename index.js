@@ -1,71 +1,66 @@
 // Write your solution here!
-
 //1) 
 
-const cats= ["Milo", "Otis", "Garfield"];
-cats.length = 0;
-
-cats.push('Milo', 'Otis', 'Garfield');
-
-cats;
+let cats = ["Milo", "Otis", "Garfield"];
 
 //2)
-const destructivelyAppendCat= ["Milo", "Otis", "Garfield"];
+function destructivelyAppendCat(name) {
 
-destructivelyAppendCat.push('Ralph');
-
-destructivelyAppendCat;
+cats.push(name);
+} 
 
 //3)
 
-const destructivelyPrependCat= ["Milo", "Otis", "Garfield"];
+function destructivelyPrependCat (name){
 
-destructivelyPrependCat.unshift('Bob');
-
-destructivelyPrependCat;
+cats.unshift(name);
+}
 
 //4)
 
-const destructivelyRemoveLastCat= ["Milo", "Otis", "Garfield"];
+function destructivelyRemoveLastCat(name) {
 
-destructivelyRemoveLastCat.pop();
-
-destructivelyRemoveLastCat;
+cats.pop(name);
+}
 
 //5
 
-const destructivelyRemoveFirstCat =["Milo", "Otis", "Garfield"];
+function destructivelyRemoveFirstCat(name) {
 
-destructivelyRemoveFirstCat.shift();
-
-destructivelyRemoveFirstCat;
+cats.shift();
+}
 
 //6
 
-const appendCat=["Milo", "Otis", "Garfield"];
+function appendCat(name) {
 
-const newAppendCat=[...appendCat,"Broom"];
+appendCat = [cats.slice()];
 
-newAppendCat;
+appendCat =[...cats, "Broom"];
+
+return appendCat;
+}
 
 //7
 
-const prependCat=["Milo", "Otis", "Garfield"];
+function prependCat(name) {
 
-const newPrependCat= ["Arnold",...prependCat];
+  prependCat= cats.slice();
+  prependCat=["Arnold",...cats]
 
-newPrependCat;
+  return prependCat;
+}
 
 //8
 
-const removeLastCat =["Milo", "Garfield", "Otis"];
+function removeLastCat(name){
 
-const newLastCat= removeLastCat.slice(0, newLastCat.length-1);
+   removeLastCat= cats.slice(0, cats.length-1);
+   return removeLastCat;
+}
+//9 
+function removeFirstCat(name){
 
-newLastCat;
-
-const removeFirstCat =["Milo", "Garfield", "Otis"];
-
-const newFirstCat = removeFirstCat.slice(1);
-
-newFirstCat;
+ removeFirstCat= cats.slice(1);
+ return removeFirstCat;
+}
